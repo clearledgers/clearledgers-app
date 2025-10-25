@@ -1,12 +1,13 @@
 {
-  "name": "my-v0-project",
+  "name": "clearledgers-landing",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
     "dev": "next dev",
-    "lint": "eslint .",
-    "start": "next start"
+    "build:css": "npx @tailwindcss/cli -i ./app/globals.css -o ./public/test.css",
+    "build": "npm run build:css && next build",
+    "start": "next start",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
